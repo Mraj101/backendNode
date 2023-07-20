@@ -4,7 +4,9 @@ const cors = require("cors");
 const mongoose = require("mongoose");
 // const UserModel = require("./models/Users");
 
-const workoutRoutes= require('./routes/workouts')
+const workoutRoutes= require('./routes/workouts');
+
+
 // const Tank = mongoose.model('Tank', yourSchema);
 const app = express();
 app.use(cors());
