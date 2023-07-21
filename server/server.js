@@ -19,7 +19,7 @@ const Port = process.env.port || 8000;
 const url = process.env.db
 const dbName = process.env.dbName
 
-mongoose.connect(url,{dbName: dbName,})
+mongoose.connect(url,{dbName: dbName})
 .then(() => {
   app.listen(8000, () => {
     console.log(`connected to database and Server started on port : http://localhost:${Port}`);
