@@ -35,7 +35,7 @@ const getSingleWorkout =async(req,res)=>{
 const createWorkout= async (req, res) => {
   try {
     const { title, reps, load } = req.body;
-    let data = await Workout.create({ title, reps, load });
+    let data = await Workouts.create({ title, reps, load });
     return res.status(201).json(data);
   } catch (error) {
     res.status(400).json({ error: error.message });
