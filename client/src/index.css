@@ -97,3 +97,21 @@ div.error {
   border-radius: 4px;
   margin: 20px 0;
 }
+
+.del{
+  outline: none;
+  color: black;
+  padding: 5px;
+  border: 2px solid black;
+  border-radius: 7px;
+  cursor: pointer;
+  font-size: 15px;
+  font-weight: 400;
+  box-shadow: 2px 5px 3px black;
+  background-color: red;
+}
+.del:hover{
+  background-color: none;
+  box-shadow: none;
+  color: black;
+}
