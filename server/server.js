@@ -5,6 +5,8 @@ const mongoose = require("mongoose");
 // const UserModel = require("./models/Users");
 
 const workoutRoutes= require('./routes/workouts');
+const userRoutes= require('./routes/user');
+
 
 
 // const Tank = mongoose.model('Tank', yourSchema);
@@ -14,6 +16,7 @@ app.use(express.json())
 
 
 app.use('/api/workouts',workoutRoutes);
+app.use('/api/user/',userRoutes)
 
 const Port = process.env.port || 8000;
 const url = process.env.db

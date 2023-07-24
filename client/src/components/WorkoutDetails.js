@@ -1,4 +1,5 @@
 import { useWorkoutsContext } from "../hooks/useWorkoutsContext";
+import DeleteIcon from '@mui/icons-material/Delete';
 const WorkoutDetails = ({ workout }) => {
 
     const {dispatch}=useWorkoutsContext();
@@ -18,7 +19,7 @@ const WorkoutDetails = ({ workout }) => {
         <p><strong>Load (kg): </strong>{workout.load}</p>
         <p><strong>Number of reps: </strong>{workout.reps}</p>
         <p>{workout.createdAt}</p>
-        <spanm ><button className="del" onClick={handleClick}>Delete</button></spanm>
+        <spanm ><button className="del" onClick={handleClick}><DeleteIcon/></button></spanm>
       </div>
     )
   }
