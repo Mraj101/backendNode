@@ -14,7 +14,7 @@ const app = express();
 app.use(cors());
 app.use(express.json())
 
-
+//middlewares
 app.use('/api/workouts',workoutRoutes);
 app.use('/api/user/',userRoutes)
 
