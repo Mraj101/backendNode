@@ -1,13 +1,13 @@
+const User=require('../models/userModel')
 
-
-//login user
-const loginUser=async(req,res){
-res.json({mssg:'login user'})
+//login  user creation
+const loginUser=async(req,res)=>{
+ 
 }
 
 
-//singup user
-const signupUser=async(req,res){
+//signup User creation
+const signupUser=async(req,res)=>{
     res.json({mssg:'signup here'})
     }
 
