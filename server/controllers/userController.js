@@ -2,13 +2,23 @@ const User=require('../models/userModel')
 
 //login  user creation
 const loginUser=async(req,res)=>{
+    res.json({mssg:'login user'})
  
 }
 
 
 //signup User creation
 const signupUser=async(req,res)=>{
-    res.json({mssg:'signup here'})
+    const {email,password}=req.body
+    
+    try{
+        const user=await user.singup(email,password)
+        res.status(200).json({email,user})
+    }catch(error){
+        res.status(404).json({error:error.messge})
+    }
+
+    
     }
 
 
