@@ -10,16 +10,17 @@ const loginUser=async(req,res)=>{
 //signup User creation
 const signupUser=async(req,res)=>{
     const {email,password}=req.body
-    
+
     try{
         const user=await User.signup(email,password)
         res.status(200).json({email,user})
-    }catch(error){
-        res.status(400).json({error:error.messge})
+    }
+    catch(error){
+        res.status(400).json({error:error.message})
     }
 
     
-    }
+}
 
 
 module.exports={
