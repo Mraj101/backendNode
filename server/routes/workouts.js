@@ -18,7 +18,7 @@ const {
 
 router.get("/", getAllWorkout);
 
-router.get("/:id", getSingleWorkout)
+router.get("/:id", getSingleWorkout);
 
 router.post("/",createWorkout);
 

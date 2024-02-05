@@ -1,14 +1,18 @@
 const User=require('../models/userModel')
+const jwt=require('jsonwebtoken');
 
+
+const createToken=(_id)=>{
+  jwt.sign
+}
 //login  user creation
 const loginUser=async(req,res)=>{
-    res.json({mssg:'login user'})
- 
+    res.json({mssg:'user trying to log in'})
 }
 
 
 //signup User creation
-const signupUser=async(req,res)=>{
+const signupUser = async(req,res)=>{
     const {email,password}=req.body
 
     try{
@@ -18,8 +22,6 @@ const signupUser=async(req,res)=>{
     catch(error){
         res.status(400).json({error:error.message})
     }
-
-    
 }
 
 

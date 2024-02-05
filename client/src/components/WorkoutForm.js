@@ -26,6 +26,7 @@ const WorkoutForm = () => {
     if (!response.ok) {
       setError(json.error)
     }
+    
     if (response.ok) {
       setError(null)
       setTitle('')
