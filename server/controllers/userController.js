@@ -1,13 +1,23 @@
 const User=require('../models/userModel')
 const jwt=require('jsonwebtoken');
-
+require('dotenv').config();
 
 const createToken=(_id)=>{
-  jwt.sign
+    return jwt.sign({_id:_id},process.env.secret,{expiresIn:'1h'});
 }
 //login  user creation
 const loginUser=async(req,res)=>{
-    res.json({mssg:'user trying to log in'})
+   const {email,password}=req.body;
+
+   try{
+    const user=await User.login(email,password);
+    const token=createToken(user._id);
+    res.status(200).json({email,token});
+}
+catch(error){
+    res.status(400).json({error:error.message})
+}
+
 }
 
 
@@ -16,8 +26,10 @@ const signupUser = async(req,res)=>{
     const {email,password}=req.body
 
     try{
-        const user=await User.signup(email,password)
-        res.status(200).json({email,user})
+        const user=await User.signup(email,password);
+        const token=createToken(user._id);
+        
+        res.status(200).json({email,token});
     }
     catch(error){
         res.status(400).json({error:error.message})
