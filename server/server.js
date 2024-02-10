@@ -20,6 +20,7 @@ const Port = process.env.port || 8000;
 const url = process.env.db;
 const dbName = process.env.dbName;
 
+console.log("hello");
 mongoose
   .connect(url, { dbName: dbName })
   .then(() => {
