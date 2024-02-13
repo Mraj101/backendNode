@@ -1,6 +1,6 @@
 {
   "name": "client",
-  "proxy":"http://localhost:8000",
+  "proxy": "http://localhost:8000",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -40,5 +40,8 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "eslint": "^8.56.0"
   }
 }
